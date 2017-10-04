@@ -10,7 +10,7 @@ In the lecture, we presented three seemingly disparate concepts: middleware,
 sessions, and passwords. For this lab, your job will be to combine these
 concepts into one authentication system.
 
-## Running the Project
+## Running the Project  (VV - Works with the Client-Auth project at port 3000.  This project is at port 5000.)
 - Run `npm install` to download the dependencies.
 - Keep `mongod --dbpath data` running in its own terminal.
 - Run `npm test` to run the tests. If you'd like, you can run `npm run watch`
