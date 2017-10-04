@@ -2,7 +2,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const session = require('express-session');
 const User = require('./user.js');
-const bycrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 
 const STATUS_USER_ERROR = 422;
 const BCRYPT_COST = 11;
@@ -108,13 +108,13 @@ server.post('/log-in', (req, res) => {
 	              return;
             }
         
-            if (!value) {
+            if (!valid) {
               sendUserError('bad credentials', res);
 	          return;
             }
 
             req.session.username = username; // at the top
-            req.json({ success: true });
+            res.json({ success: true });
         });
     }); 
 });
