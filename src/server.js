@@ -83,7 +83,7 @@ server.post('/users', (req, res) => {
 });
 
 
-server.post('/log-in', (req, res) => {
+server.post('/login', (req, res) => {
 	const { username, password } = req.body;
 
 	if (!username || !password) {
